@@ -21,3 +21,6 @@ def v_LogIn(request,Matricula,Password):
 			Negativo = 1
 		return render_to_response("LogIn.html" ,{"Negativo":Negativo}, context_instance = RequestContext(request))
 
+def v_Boleta(request, Matricula):
+		Boleta = Clientes.objects.raw("Select A.Nombre as NombreAlumno, A.Matricula, M.Nombre as NombreMateria, GA.C1, GA.C2, GA.C3, GA.Faltas_Totales, GA.Calificacion_Final FROM principal_grupo_alumno GA, principal_alumno A, principal_materia M, principal_grupo G WHERE (A.Matricula = '"'%%%%'+str(Matricula)+'%%%%'"'  ) AND M.Clave_Materia=G.Clave_Materia_id AND GA.Matricula_id = A.Matricula")
+		return render_to_response("Boleta.html" ,{"MateriaBoleta":Boleta}, context_instance = RequestContext(request))

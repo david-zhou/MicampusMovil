@@ -1,0 +1,41 @@
+<div class="containter" style="margin-left:30px; margin-top:20px" >
+Nombre: 
+   <table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>Materia:</th> 
+      <th>Faltas totales</th>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>F</th>
+    </tr>
+  </thead>
+<tbody>
+    {% for CalificacionesAlumno in MateriaBoleta %}
+    <tr>
+      <td> {{ CalificacionesAlumno.NombreMateria }} </td>
+      <td> {{ CalificacionesAlumno.Faltas_Totales }} </td>
+      <td> {{ CalificacionesAlumno.C1 }} </td>
+      <td> {{ CalificacionesAlumno.C2 }} </td>
+      <td> {{ CalificacionesAlumno.C3 }} </td>
+      <td> {{ CalificacionesAlumno.Calificacion_Final }} </td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan = "6"> No se encuentran clientes. </td>
+    </tr>
+  {% endfor %}
+</tbody>
+</table>    
+
+</div>
+<script type="text/javascript">
+function link()
+{
+  var nombre=document.getElementById('nom').value;
+  var rfc = document.getElementById('RFC').value;
+  window.location.href=nombre+'+'+rfc;
+
+}
+</script>           

@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
 	url(r'^(?P<Matricula>\w+)?\+?(?P<Password>\w+)?$','principal.views.v_LogIn'),
 	url(r'^Principal/(?P<Matricula>\w+)?$','principal.views.v_index'),
+	url(r'^Boleta/$','principal.views.v_Boleta'),
     # Examples:
     # url(r'^$', 'MicampusMovil.views.home', name='home'),
     # url(r'^MicampusMovil/', include('MicampusMovil.foo.urls')),

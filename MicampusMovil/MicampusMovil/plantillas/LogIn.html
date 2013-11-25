@@ -1,0 +1,41 @@
+{% extends "Base.html" %}
+
+{% block titulo %} Cetys Universidad  {% endblock titulo %}
+
+{% block contenido %}
+<div style = "margin-left:10px;margin-top:10px">
+	<img class ="span2" src="{{STATIC_URL}}images/Cetys.jpg"></img>
+
+<div class = "input-control text">
+	<input type = "text" placeholder="user" style="width:200px;" id ="matricula"/>
+</div>
+
+<div class="input-control password">
+    <input type="password" value="" placeholder="password" style="width:200px;" id ="pass"/>
+</div>
+
+<a class="button large primary" onClick="link()">
+    Log In
+</a>
+</div>
+
+<script type="text/javascript">
+function link()
+{
+
+  var Matricula=document.getElementById('matricula').value;
+  
+  var password = document.getElementById('pass').value;
+
+  window.location.href=Matricula+'+'+password;
+
+}
+	if({{Negativo}} == 1)
+	{
+		alert("Lo siento amiguito.");
+	}
+</script> 
+{% endblock contenido %}
+
+
+

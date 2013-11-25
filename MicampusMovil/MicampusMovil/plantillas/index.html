@@ -3,13 +3,32 @@
 {% block titulo %} Cetys Universidad  {% endblock titulo %}
 
 {% block contenido %}
-<div>
-<p> mames</p>
-<button class="shortcut">Button</button>
-
-<button class="shortcut">
-    <i class="icon-rocket"></i>
-    Rocket
+<div style = "margin-left:10px;margin-top:10px">
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Titulacion.png"></img>
+</button>
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Boleta.png"></img>
+</button>
+<br>
+<div style ="margin-top:10px">
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Historial.png"></img>
+</button>
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Servicio-Social.png"></img>
 </button>
 </div>
+<div style="margin-top:10px">
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Practicas.png"></img>
+</button>
+<button class="shortcut info">
+    <img src = "{{STATIC_URL}}images/Horario.png"></img>
+</button>
+</div>
+</div>
 {% endblock contenido %}
+</div style ="margin-top:10px;margin-left:10px;">
+
+</div>

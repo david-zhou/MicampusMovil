@@ -2,9 +2,12 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from principal.models import Alumno
+from principal.models import Grupo_Alumno
+from principal.models import Materia
+from principal.models import Grupo
 
 def v_index(request,Matricula):
-	return render_to_response("index.html" , context_instance = RequestContext(request))
+	return render_to_response("index.html", {"Matricula":Matricula}, context_instance = RequestContext(request))
 
 def v_LogIn(request,Matricula,Password):
 	try:	
@@ -22,5 +25,5 @@ def v_LogIn(request,Matricula,Password):
 		return render_to_response("LogIn.html" ,{"Negativo":Negativo}, context_instance = RequestContext(request))
 
 def v_Boleta(request, Matricula):
-		Boleta = Clientes.objects.raw("Select A.Nombre as NombreAlumno, A.Matricula, M.Nombre as NombreMateria, GA.C1, GA.C2, GA.C3, GA.Faltas_Totales, GA.Calificacion_Final FROM principal_grupo_alumno GA, principal_alumno A, principal_materia M, principal_grupo G WHERE (A.Matricula = '"'%%%%'+str(Matricula)+'%%%%'"'  ) AND M.Clave_Materia=G.Clave_Materia_id AND GA.Matricula_id = A.Matricula")
+		Boleta = Grupo_Alumno.objects.raw("Select A.Nombre as NombreAlumno, A.Matricula, GA.Clave_Grupo_Alumno,M.Clave_Materia, G.Clave_Grupo, M.Nombre as NombreMateria, GA.C1, GA.C2, GA.C3, GA.Faltas_Totales, GA.Calificacion_Final FROM principal_grupo_alumno GA, principal_alumno A, principal_materia M, principal_grupo G WHERE (A.Matricula = '"'%%%%'+str(Matricula)+'%%%%'"'  ) AND M.Clave_Materia=G.Clave_Materia_id AND GA.Matricula_id = A.Matricula")
 		return render_to_response("Boleta.html" ,{"MateriaBoleta":Boleta}, context_instance = RequestContext(request))

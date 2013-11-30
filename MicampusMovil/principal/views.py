@@ -27,3 +27,6 @@ def v_LogIn(request,Matricula,Password):
 def v_Boleta(request, Matricula):
 		Boleta = Grupo_Alumno.objects.raw("Select A.Nombre as NombreAlumno, A.Matricula, GA.Clave_Grupo_Alumno,M.Clave_Materia, G.Clave_Grupo, M.Nombre as NombreMateria, GA.C1, GA.C2, GA.C3, GA.Faltas_Totales, GA.Calificacion_Final FROM principal_grupo_alumno GA, principal_alumno A, principal_materia M, principal_grupo G WHERE (A.Matricula = '"'%%%%'+str(Matricula)+'%%%%'"'  ) AND M.Clave_Materia=G.Clave_Materia_id AND GA.Matricula_id = A.Matricula")
 		return render_to_response("Boleta.html" ,{"MateriaBoleta":Boleta}, context_instance = RequestContext(request))
+
+def v_Practicas(request, Matricula):
+	return render_to_response("Practicas.html", {"Matricula":Matricula}, context_instance = RequestContext(request))

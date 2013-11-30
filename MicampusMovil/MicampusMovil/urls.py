@@ -8,6 +8,7 @@ urlpatterns = patterns('',
 	url(r'^(?P<Matricula>\w+)?\+?(?P<Password>\w+)?$','principal.views.v_LogIn'),
 	url(r'^Principal/(?P<Matricula>\w+)?$','principal.views.v_index'),
 	url(r'^Boleta/(?P<Matricula>\w+)??$','principal.views.v_Boleta'),
+    url(r'^Practicas/(?P<Matricula>\w+)??$','principal.views.v_Practicas'),
     # Examples:
     # url(r'^$', 'MicampusMovil.views.home', name='home'),
     # url(r'^MicampusMovil/', include('MicampusMovil.foo.urls')),

@@ -3,20 +3,22 @@
 {% block titulo %} Cetys Universidad  {% endblock titulo %}
 
 {% block contenido %}
-<div style = "margin-left:10px;margin-top:10px">
-	<img class ="span2" src="{{STATIC_URL}}images/Cetys.jpg"></img>
-
-<div class = "input-control text">
-	<input type = "text" placeholder="user" style="width:200px;" id ="matricula"/>
+<div style = "margin:7%" align="center">
+<div style="height:100%;width:100%;">
+	<img src="{{STATIC_URL}}images/Cetys.jpg" style="height:40%;width:40%;"></img>
+</div>
+<div class = "input-control text" style="height:100%;width:100%;margin:2%">
+	<input type = "text" placeholder="user" id ="matricula" style="height:80%;width:100%;"/>
 </div>
 
-<div class="input-control password">
-    <input type="password" value="" placeholder="password" style="width:200px;" id ="pass"/>
+<div class="input-control password" style="height:100%;width:100%;margin:2%">
+    <input type="password" value="" placeholder="password"  id ="pass"/>
 </div>
-
-<a class="button large primary" onClick="link()">
+<div style="height:100%;width:100%;margin:2%">
+<a class="button large primary" onClick="link()" style="height:80%;width:100%;">
     Log In
 </a>
+</div>
 </div>
 
 <script type="text/javascript">

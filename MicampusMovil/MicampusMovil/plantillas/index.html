@@ -3,32 +3,53 @@
 {% block titulo %} Cetys Universidad  {% endblock titulo %}
 
 {% block contenido %}
-<div style = "margin-left:10px;margin-top:10px">
-<button class="shortcut info">
-    <a href = "/Titulacion/{{MAtricula}}"><img src = "{{STATIC_URL}}images/Titulacion.png"></img>
-</button>
-<button class="shortcut info">
-    <a href="/Boleta/{{Matricula}}"> <img  src = "{{STATIC_URL}}images/Boleta.png"></img> <a>
-</button>
+<div align="center">
+<div style="height:100%;width:100%;">
+<a class="btn shortcut info" style="height:15%;width:15%;margin-right:10%;margin-bottom:1;" href="/Boleta/{{Matricula}}">
+    <img  src = "{{STATIC_URL}}images/Boleta.png"></img> 
+    Boleta
+</a>
+
+<a class="btn shortcut info" style="height:15%;width:15%;" href="/Horario/{{Matricula}}">
+    <img src = "{{STATIC_URL}}images/Horario.png"></img>
+    Horario
+
+</a>
+</div>
+
+
+
 <br>
-<div style ="margin-top:10px">
-<button class="shortcut info">
-     <a href="/Historial/{{Matricula}}"><img src = "{{STATIC_URL}}images/Historial.png"></img>
-</button>
-<button class="shortcut info">
-    <a href="/Servicio/{{Matricula}}"><img src = "{{STATIC_URL}}images/Servicio-Social.png"></img>  
-</button>
+<div style="height:100%;width:100%;">
+<a class="btn shortcut info" style="height:15%;width:15%;margin-right:10%;margin-bottom:1;" href="/Historial/{{Matricula}}">
+    <img src = "{{STATIC_URL}}images/Historial.png"></img>
+    Historial
+</a>
+
+
+<a class="btn shortcut info" style="height:15%;width:15%;" href="/Practicas/{{Matricula}}">
+    <img  src = "{{STATIC_URL}}images/Practicas.png"></img> 
+    Practicas
+</a>
 </div>
-<div style="margin-top:10px">
-<button class="shortcut info">
-    <a href="/Practicas/{{Matricula}}"> <img  src = "{{STATIC_URL}}images/Practicas.png"></img> <a>
-</button>
-<button class="shortcut info">
-   <a href="/Horario/{{Matricula}}"> <img src = "{{STATIC_URL}}images/Horario.png"></img>
-</button>
-</div>
-</div>
-{% endblock contenido %}
-</div style ="margin-top:10px;margin-left:10px;">
+
+
+
+<br>
+<div style="height:100%;width:100%;">
+<a class="btn shortcut info" style="height:15%;width:15%;margin-right:10%;margin-bottom:1;" href = "/Titulacion/{{MAtricula}}">
+    <img src = "{{STATIC_URL}}images/Titulacion.png"></img>
+    Titulacion
+</a>
+
+
+<a class="btn shortcut info" style="height:15%;width:15%;" href="/Servicio/{{Matricula}}">
+    <img src = "{{STATIC_URL}}images/Servicio-Social.png" ></img>
+    Servicio Social
+</a>
 
 </div>
+
+
+</div>
+{% endblock contenido %}

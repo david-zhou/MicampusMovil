@@ -1,50 +1,91 @@
-<title>Prácticas Profesionales</title>
+{% extends "Base.html" %}
+
+{% block titulo %} Boleta {% endblock titulo %}
+{% block contenido %}
+<div class="containter" style="margin-left:30px; margin-top:20px" >
+
+<h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
+                    font-weight: normal;
+                    font-size: 100%;
+                    text-align: left;
+                    ">
+          Prácticas Profesionales </h6>
+
+
+    <nav class="breadcrumbs mini">
+          <ul>
+           <li><a href="/Principal/{{Matricula}}"><img  style = "width:18px;" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+           </ul>
+      </nav>
+
 </head>
 
 <body>
-        <h2>Prácticas Profesionales</h3>
        
         
-        <h3>Consideraciones generales</h3>
+        <h6 style = "font-size:70%;">Consideraciones generales</h6>
         
-        <p>Las Prácticas Profesionales son un requisito institucional para la titulación que contribuirá a tu formación profesional, proporcionándote un primer contacto con la vida laboral en un ambiente real. Al poner tus habilidades al servicio de una empresa real, tendrás la oportunidad de ponerlas a prueba, mejorarlas y aprender más.</p>
+        <p style = "font-size:70%;">Las Prácticas Profesionales son un requisito institucional para la titulación que contribuirá a tu formación profesional, proporcionándote un primer contacto con la vida laboral en un ambiente real. Al poner tus habilidades al servicio de una empresa real, tendrás la oportunidad de ponerlas a prueba, mejorarlas y aprender más.</p>
 
-        <p>Consisten en 400 horas de trabajo de medio tiempo en alguna empresa de la localidad, realizando alguna actividad relacionada con tu carrera.</p>
+        <p style = "font-size:70%;">Consisten en 400 horas de trabajo de medio tiempo en alguna empresa de la localidad, realizando alguna actividad relacionada con tu carrera.</p>
         
-        <h3>Requisitos</h3>
+        <h3 style = "font-size:70%;">Requisitos</h3>
 
-        <p>Para llevar tus prácticas profesionales, es necesario:</p>
+        <p style = "font-size:70%;">Para llevar tus prácticas profesionales, es necesario:</p>
+        
+        <ol>
         <ul>
-        <li>Que estés cursando el quinto semestre o uno superior.</li>
-        <li>Que las prácticas se cursen en un periodo mínimo de dos meses. No hay un límite máximo establecido; éste queda a discreción del practicante y de la empresa.</li>
-        <li>Presentar la documentación conforme a</li>
+        <li style = "font-size:70%;">Que estés cursando el quinto semestre o uno superior.</li>
+        <li style = "font-size:70%;">Que las prácticas se cursen en un periodo mínimo de dos meses. No hay un límite máximo establecido; éste queda a discreción del practicante y de la empresa.</li>
+        <li style = "font-size:70%;">Presentar la documentación conforme a</li>
         </ul>
+        </ol>
 
 
-        <p>La documentación necesaria para deberás entregar:</p>
+        <p style = "font-size:70%;">La documentación necesaria para deberás entregar:</p>
+        <ol>
         <ul>
-        <li>Solicitud de prácticas profesionales. <a href="http://www.mxl.cetys.mx/practicasprof/FORMATO_SOLICITUD_PP.doc">Descargar el formato.</a></li> 
-        Aquí especificarás el lugar, periodo y actividad a desempeñar.   
+        <li style = "font-size:70%;">Solicitud de prácticas profesionales. <a href="http://www.mxl.cetys.mx/practicasprof/FORMATO_SOLICITUD_PP.doc">Descargar el formato.</a></li> 
+        <p style = "font-size:70%;">Aquí especificarás el lugar, periodo y actividad a desempeñar.</p>
         </ul>
+        </ol>
+        <ol>
         <ul>
-        <li>Reportes mensuales. <a href="http://www.mxl.cetys.mx/practicasprof/FORMATO_REPORTE_PP.doc">Descargar el formato.</a></li> 
-        Una vez que efectúes las prácticas entregarás mensualmente un reporte de 100 horas, donde detallarás las actividades realizadas durante el mes.
+        <li style = "font-size:70%;">Reportes mensuales. <a href="http://www.mxl.cetys.mx/practicasprof/FORMATO_REPORTE_PP.doc">Descargar el formato.</a></li> 
+        <p style = "font-size:70%;">Una vez que efectúes las prácticas entregarás mensualmente un reporte de 100 horas, donde detallarás las actividades realizadas durante el mes.</p>
            
         </ul>
+        </ol>
+        <ol>
         <ul>
-        <li>Constancia de liberación de prácticas.</li> 
-        Solicitar a la empresa una carta donde se especifique el puesto que desempeñaste, el periodo, el total de horas y tu nombre completo; esta deberá ser una hoja membretada, con firma de tu jefe y sello de la empresa.
+        <li style = "font-size:70%;">Constancia de liberación de prácticas.</li> 
+        <p style = "font-size:70%;">Solicitar a la empresa una carta donde se especifique el puesto que desempeñaste, el periodo, el total de horas y tu nombre completo; esta deberá ser una hoja membretada, con firma de tu jefe y sello de la empresa.</p>
         </ul>
+        </ol>
+        <p style = "font-size:70%;">La solicitud y reportes mensuales deberás llenarlos a máquina o computadora con los datos requeridos y presentarlos en la empresa donde efectuarás tus prácticas para que sean firmados y sellados. Estos reportes los presentarás para revisión y autorización con el maestro asesor de tu carrera. Una vez firmados y autorizados los entregarás a la Dir. de Servicios Escolares para archivo en tu expediente de titulación.</p>
+        <p style = "font-size:70%;">Nota: Es necesario tener cubierto el 50% de la licenciatura antes de iniciar las prácticas profesionales.</p>
+        <p style = "font-size:70%;">Para mayores informes acude con tu coordinador de carrera o a la Dir. de Servicios Escolares</p>
 
-        <p>La solicitud y reportes mensuales deberás llenarlos a máquina o computadora con los datos requeridos y presentarlos en la empresa donde efectuarás tus prácticas para que sean firmados y sellados. Estos reportes los presentarás para revisión y autorización con el maestro asesor de tu carrera. Una vez firmados y autorizados los entregarás a la Dir. de Servicios Escolares para archivo en tu expediente de titulación.</p>
-        <p>Nota: Es necesario tener cubierto el 50% de la licenciatura antes de iniciar las prácticas profesionales.</p>
-        <p>Para mayores informes acude con tu coordinador de carrera o a la Dir. de Servicios Escolares</p>
-        <h3>Campus Mexicali</h3>
-        <a href="mailto:escolar@cetys.mx">escolar@cetys.mx</a>
-        <h3>Campus Ensenada</h3>
-        <a href="mailto:escolarens@cetys.mx">escolarens@cetys.mx</a>
-        <h3>Campus Tijuana</h3>
-        Lic. Elizdath Peña Vela <br>Coordinadora de servicio social y prácticas profesionales
-        <br><a href="mailto:elizdath.pena@cetys.mx">elizdath.pena@cetys.mx</a>
+
+
+        <address style = "font-size:70%;">
+        Campus Mexicali<br />
+        <a style = "font-size:70%;" href="mailto:escolar@cetys.mx">escolar@cetys.mx</a><br>
+        </address>
+
+        <address style = "font-size:70%;">
+        Campus Ensenada<br />
+        <a style = "font-size:70%;" href="mailto:escolarens@cetys.mx">escolarens@cetys.mx</a><br>
+        </address>
+
+        <address style = "font-size:70%;">
+        Campus Tijuana<br />
+        Lic. Elizdath Peña Vela<br>
+        <a  style = "font-size:70%;"href="mailto:elizdath.pena@cetys.mx">elizdath.pena@cetys.mx</a></br>
+        </address>
+
+
+
     </body>
 </html>
+{% endblock contenido %}

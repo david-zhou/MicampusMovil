@@ -1,0 +1,373 @@
+{% extends "Base.html" %}
+{% block estilo %}
+
+
+{% endblock estilo %}
+{% block titulo %} Historial {% endblock titulo %}
+{% block contenido %}
+<meta charset="utf-8">
+<div class="containter" style="margin-left:30px; margin-top:20px" >
+
+            <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
+                    font-weight: normal;
+                    font-size: 100%;
+                    text-align: left;
+                    ">
+          Historial Academico</h6>
+                    
+          <nav class="breadcrumbs mini">
+            <ul>
+              <li><a href="/Principal/{{Matricula}}"><img  style = "width:18px;" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+            </ul>
+          </nav>
+
+
+<h6></h6>
+<h6 style = "font-size:60%; line-height:70%;" >Matricula : {{A.0.Matricula}}</h6>
+<h6 style = "font-size:60%; line-height:70%;">Nombre : {{A.0.Nombre}}</h6>
+<h6 style = "font-size:60%; line-height:70%;">Concentracion : {{A.0.Concentracion}}</h6>
+
+ 
+ <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Primer Semestre </h6>
+
+      <table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Historial %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Historial|get_at_index:x != Historial|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Historial|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Historial|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+    </table>
+
+
+ <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Segundo Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Segundo %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Segundo|get_at_index:x != Segundo|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Segundo|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Segundo|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+ <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Tercer Semestre </h6>
+
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Tercero %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Tercero|get_at_index:x != Tercero|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Tercero|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Tercero|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+      <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Cuarto Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Cuarto %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Cuarto|get_at_index:x != Cuarto|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Cuarto|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Cuarto|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+      <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Quinto Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Quinto %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Quinto|get_at_index:x != Quinto|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Quinto|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Quinto|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+      <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Sexto Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Sexto %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Sexto|get_at_index:x != Sexto|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Sexto|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Sexto|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+      <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Septimo Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Septimo %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Septimo|get_at_index:x != Septimo|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Septimo|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Septimo|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+</table>
+      <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+                    font-weight: normal;
+                    font-size: 80%;
+                    line-height: 70%;
+                    text-align: left;
+                    "> Octavo Semestre </h6>
+
+<table style = "width:15%; font-size:1em;" border="2">
+
+  <thead>
+    <tr>      
+
+      <th style = "font-size:70%;">Nombre materia</th>
+      <th style = "font-size:70%;">Calificación Final</th>
+
+    </tr>
+  </thead>
+    <tbody>
+
+{% for H in Octavo %}
+{% with forloop.counter|add:-1 as i %} 
+{% with forloop.counter as x %}
+{% load apptags %}
+  {% if forloop.first %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ H.Nombre}} </td>
+        <td  style = "font-size:60%;"> {{ H.Calificacion_Final }} </td>
+      </tr>
+  {% else %}
+      {% if Octavo|get_at_index:x != Octavo|get_at_index:i %}
+      <tr>
+        <td  style = "font-size:60%;"> {{ Octavo|get_nombre_at:x }} </td>
+        <td  style = "font-size:60%;"> {{ Octavo|get_calificacion_at:x }} </td>
+      </tr>
+      {% endif %}
+  {% endif %}
+ {% endwith%}
+ {% endwith%}
+{% endfor %}
+  
+    </tbody>
+ </table>
+    </ul>
+ </div>
+
+{% endblock contenido %}

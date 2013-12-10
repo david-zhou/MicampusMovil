@@ -1,0 +1,34 @@
+{% extends "Base.html" %}
+{% block estilo %}
+
+
+{% endblock estilo %}
+{% block titulo %} Historial {% endblock titulo %}
+{% block contenido %}
+<meta charset="utf-8">
+<div class="containter" style="margin-left:30px; margin-top:20px" >
+
+           <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
+                    font-weight: normal;
+                    font-size: 100%;
+                    text-align: left;
+                    ">
+          Servicio Social </h6>
+ 
+
+          <nav class="breadcrumbs mini">
+          <ul>
+        <li><a href="/Principal/{{Matricula}}"><img  style = "width:18px;" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+        <li class = "{%block inicio %}{% endblock inicio %}"><a href="/Servicio/">Inicio</a></li>
+        <li class = "{%block requisitos %}{% endblock requisitos %}"><a href="/Requisitos/">Requisitos</a></li>
+        <li class = "{%block pasos %}{% endblock pasos %}"><a href="/Pasos/">Pasos</a></li>
+        <li class = "{%block programas %}{% endblock programas %}"><a href="/Programas/">Programas</a></li>
+        <li class = "{%block contacto %}{% endblock contacto %}"><a href="/Contacto/">Contacto</a></li>
+        </ul>
+          </nav>
+
+    </ul>
+ </div>
+ {% block contenidoServicio %}
+{% endblock contenidoServicio %}
+{% endblock contenido %}

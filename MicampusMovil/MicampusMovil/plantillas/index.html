@@ -5,7 +5,7 @@
 {% block contenido %}
 <div style = "margin-left:10px;margin-top:10px">
 <button class="shortcut info">
-    <img src = "{{STATIC_URL}}images/Titulacion.png"></img>
+    <a href = "/Titulacion/{{MAtricula}}"><img src = "{{STATIC_URL}}images/Titulacion.png"></img>
 </button>
 <button class="shortcut info">
     <a href="/Boleta/{{Matricula}}"> <img  src = "{{STATIC_URL}}images/Boleta.png"></img> <a>
@@ -13,10 +13,10 @@
 <br>
 <div style ="margin-top:10px">
 <button class="shortcut info">
-    <img src = "{{STATIC_URL}}images/Historial.png"></img>
+     <a href="/Historial/{{Matricula}}"><img src = "{{STATIC_URL}}images/Historial.png"></img>
 </button>
 <button class="shortcut info">
-    <img src = "{{STATIC_URL}}images/Servicio-Social.png"></img>
+    <a href="/Servicio/{{Matricula}}"><img src = "{{STATIC_URL}}images/Servicio-Social.png"></img>  
 </button>
 </div>
 <div style="margin-top:10px">
@@ -24,7 +24,7 @@
     <a href="/Practicas/{{Matricula}}"> <img  src = "{{STATIC_URL}}images/Practicas.png"></img> <a>
 </button>
 <button class="shortcut info">
-    <img src = "{{STATIC_URL}}images/Horario.png"></img>
+   <a href="/Horario/{{Matricula}}"> <img src = "{{STATIC_URL}}images/Horario.png"></img>
 </button>
 </div>
 </div>

@@ -7,29 +7,30 @@
 {% block contenido %}
 <meta charset="utf-8">
 
+
 <div style = "margin:7%" align="center">
 <div class="containter" style="height:100%;width:100%;" >
 
 <style>
   h6.normal {line-height:150%; font-size: 180%}
-  table.normal{width: 15%; font-size: 180%}
-  p.big {line-height:150%; font-size: 180%;}
+  table.normal{width: 100%; font-size: 180%}
+  p.big {line-height:150%; font-size: 180%; height: 100%}
   li.big {line-height:150%; font-size: 180%;}
 </style>
-            <h6 class = "normal">
+        <h6 class = "normal">
           Historial Academico</h6>
                     
           <nav class="breadcrumbs mini">
             <ul>
-              <li><a style ="width:100%;"href="/Principal/{{Matricula}}"><img  style = "width:18px;" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+              <li><a style ="width:100%;"href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
             </ul>
           </nav>
 
 
 <h6></h6>
-<h6 class = "normal" >Matricula : {{A.0.Matricula}}</h6>
-<h6 class = "normal">Nombre : {{A.0.Nombre}}</h6>
-<h6 class = "normal">Concentracion : {{A.0.Concentracion}}</h6>
+<h6 align = "left" class = "normal" >Matricula : {{A.0.Matricula}}</h6>
+<h6 align = "left" class = "normal">Nombre : {{A.0.Nombre}}</h6>
+<h6 align = "left" class = "normal">Concentracion : {{A.0.Concentracion}}</h6>
 
  
  <h6 class = "normal"> Primer Semestre </h6>

@@ -6,29 +6,33 @@
 {% block titulo %} Historial {% endblock titulo %}
 {% block contenido %}
 <meta charset="utf-8">
+<div style = "margin:7%" align="center">
 <div class="containter" style="margin-left:30px; margin-top:20px" >
 
-    <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
-                    font-weight: normal;
-                    font-size: 100%;
-                    text-align: left;
-                    ">
+<style>
+  h6.normal {line-height:150%; font-size: 180%}
+  table.normal{width: 100%; font-size: 180%}
+  p.big {line-height:150%; font-size: 180%; height: 100%}
+  li.big {line-height:150%; font-size: 180%;}
+</style>
+
+    <h6 class = "normal">
           Horario </h6>
     
-    <nav class="breadcrumbs mini">
+     <nav class="breadcrumbs mini">
             <ul>
-              <li><a href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+              <li><a style ="width:100%;"href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
             </ul>
           </nav>
 
-      <table style = "width:15%; font-size:1em;" border="2">
+      <table class = "normal" border="2">
 
   <thead>
     <tr>      
 
-      <th style = "font-size:70%;">Nombre materia</th>
-      <th style = "font-size:70%;">Salon</th>
-      <th style = "font-size:70%;">Horario</th>
+      <th>Nombre materia</th>
+      <th>Salon</th>
+      <th>Horario</th>
 
     </tr>
   </thead>
@@ -37,9 +41,9 @@
 {% for H in horario %}
 
       <tr>
-        <td style = "font-size:60%;">{{ H.Nombre }} </td>
-        <td style = "font-size:60%;">{{ H.Salon }} </td>
-        <td style = "font-size:70%;">{{ H.Horario }}</td>
+        <td>{{ H.Nombre }} </td>
+        <td>{{ H.Salon }} </td>
+        <td>{{ H.Horario }}</td>
       </tr>
     
 {% endfor %}
@@ -49,5 +53,6 @@
 
 
     </ul>
+ </div>
  </div>
 {% endblock contenido %}

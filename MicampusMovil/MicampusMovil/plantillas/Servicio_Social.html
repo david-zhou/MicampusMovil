@@ -6,16 +6,19 @@
 {% block titulo %} Historial {% endblock titulo %}
 {% block contenido %}
 <meta charset="utf-8">
-<div class="containter" style="margin-left:30px; margin-top:20px" >
+<div  style="margin:7%">
+<div class="containter">
 
-           <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
-                    font-weight: normal;
-                    font-size: 100%;
-                    text-align: left;
-                    ">
+<style>
+  h6.normal {line-height:150%; font-size: 180%}
+  table.normal{width: 100%; font-size: 180%}
+  p.big {line-height:150%; font-size: 180%; height: 100%}
+  li.big {line-height:150%; font-size: 180%;}
+</style>
+           <h6 class="normal">
           Servicio Social </h6>
  
-
+<!--
           <nav class="breadcrumbs mini">
           <ul>
         <li><a href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
@@ -25,9 +28,19 @@
         <li class = "{%block programas %}{% endblock programas %}"><a href="/Programas/{{Matricula}}">Programas</a></li>
         <li class = "{%block contacto %}{% endblock contacto %}"><a href="/Contacto/{{Matricula}}">Contacto</a></li>
         </ul>
-          </nav>
+</nav>-->
+
+<div class="button-set">
+    <a href="/Principal/{{Matricula}}"><button> <img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></button></a>
+    <a href="/Servicio/{{Matricula}}"><button style = "width:12%; height:60px;font-size: 160%">Inicio</button></a>
+    <a href="/Requisitos/{{Matricula}}"><button style = "width:19%; height:60px;font-size: 155%">Requisitos</button></a>
+    <a href="/Pasos/{{Matricula}}"><button style = "width:12%; height:60px;font-size: 160%">Pasos</button></a>
+    <a href="/Programas/{{Matricula}}"><button style = "width:19%; height:60px;font-size: 150%">Programas</button></a>
+    <a href="/Contacto/{{Matricula}}"><button style = "width:17%; height:60px;font-size: 160%">Contacto</button></a>
+</div>
 
     </ul>
+ </div>
  </div>
  {% block contenidoServicio %}
 {% endblock contenidoServicio %}

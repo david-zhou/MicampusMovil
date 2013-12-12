@@ -7,27 +7,37 @@
 {%block ClientesActivo%}active{%endblock ClientesActivo%}
 {% block contenido %}
 <meta charset="utf-8">
-<div class="containter" style="margin-left:30px; margin-top:20px" >
 
-           <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
-                    font-weight: normal;
-                    font-size: 100%;
-                    text-align: left;
-                    ">
+<div style = "margin:7%">
+<div class="containter">
+
+<style>
+  h6.normal {line-height:150%; font-size: 180%}
+  </style>
+           <h6 class = "normal">
           Titulación </h6>
 
+<!--
           <nav class="breadcrumbs mini">
           <ul>
-           <li><a href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
-        <li class = "{%block inicio %}{% endblock inicio %}"><a href="/Titulacion/{{Matricula}}">Inicio</a></li>
-        <li class = "{%block requisitos %}{% endblock requisitos %}"><a href="/TRequisitos/{{Matricula}}">Requisitos</a></li>
-        <li class = "{%block actividades %}{% endblock actividades %}"><a href="/TActividades/{{Matricula}}">Pasos</a></li>
-        <li class = "{%block contacto %}{% endblock contacto %}"><a href="/TContacto/{{Matricula}}">Contacto</a></li>
+           <li><a style ="width:100%;" href="/Principal/{{Matricula}}"><img style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
+        <li class = "{%block inicio %}{% endblock inicio %}"><a style ="width:50px; height:50px"href="/Titulacion/{{Matricula}}">Inicio</a></li>
+        <li class = "{%block requisitos %}{% endblock requisitos %}"><a style ="width:100%;" href="/TRequisitos/{{Matricula}}">Requisitos</a></li>
+        <li class = "{%block actividades %}{% endblock actividades %}"><a style ="width:100%;" href="/TActividades/{{Matricula}}">Pasos</a></li>
+        <li class = "{%block contacto %}{% endblock contacto %}"><a style ="width:100%;" href="/TContacto/{{Matricula}}">Contacto</a></li>
         </ul>
-          </nav>
+          </nav>-->
+
+<div class="button-set">
+    <a href="/Principal/{{Matricula}}"><button> <img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></button></a>
+    <a href="/Titulacion/{{Matricula}}"><button style = "width:21%; height:60px;font-size: 175%">Inicio</button></a>
+    <a href="/TRequisitos/{{Matricula}}"><button style = "width:21%; height:60px;font-size: 160%">Requisitos</button></a>
+    <a href="/TActividades/{{Matricula}}"><button style = "width:21%; height:60px;font-size: 175%">Pasos</button></a>
+    <a href="/TContacto/{{Matricula}}"><button style = "width:21%; height:60px;font-size: 175%">Contacto</button></a>
+</div>
 
     </ul>
- </div>
+ </div></div>
  {% block contenidoTitulacion %}
 {% endblock contenidoTitulacion %}
 {% endblock contenido %}

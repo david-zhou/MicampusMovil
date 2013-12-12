@@ -15,3 +15,16 @@ def get_nombre_at(list, index):
 @register.filter
 def get_calificacion_at(list, index):
     return list[index].Calificacion_Final
+
+@register.filter
+def get_gamatricula_at(list, index):
+    return list[index].Matricula_id
+
+@register.filter
+def get_mat_at(list, index):
+    return list[index].Matricula
+
+@register.filter
+def get_cg_at(list, index):
+    return list[index].Clave_Grupo
+

@@ -20,11 +20,9 @@
         <h6 class = "normal">
           Historial Academico</h6>
                     
-          <nav class="breadcrumbs mini">
-            <ul>
-              <li><a style ="width:100%;"href="/Principal/{{Matricula}}"><img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></img></a></li>
-            </ul>
-          </nav>
+       <div class="button-set">
+    <a href="/Principal/{{Matricula}}"><button> <img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></button></a>
+    </div>
 
 
 <h6></h6>
@@ -51,19 +49,19 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+      {% if Historial|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Historial|get_at_index:x != Historial|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Historial|get_nombre_at:x }} </td>
-        <td> {{ Historial|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Historial|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
+
  {% endwith%}
  {% endwith%}
 {% endfor %}
@@ -74,7 +72,7 @@
 
  <h6 class = "normal"> Segundo Semestre </h6>
 
-<table class = "normal" border="2">
+ <table class = "normal" border="2">
 
   <thead>
     <tr>      
@@ -90,19 +88,18 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+      {% if Segundo|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Historial|get_at_index:x != Historial|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Historial|get_nombre_at:x }} </td>
-        <td> {{ Historial|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Segundo|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
@@ -129,25 +126,24 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+     {% if Tercero|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Tercero|get_at_index:x != Tercero|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Tercero|get_nombre_at:x }} </td>
-        <td> {{ Tercero|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Tercero|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
-</table>
+    </table>
       <h6 class ="normal"> Cuarto Semestre </h6>
 
 <table class = "normal" border="2">
@@ -166,28 +162,27 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+   {% if Cuarto|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Cuarto|get_at_index:x != Cuarto|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Cuarto|get_nombre_at:x }} </td>
-        <td> {{ Cuarto|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Cuarto|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
-</table>
+    </table>
       <h6 class = "normal"> Quinto Semestre </h6>
 
-<table  class = "normal" border="2">
+<table class = "normal" border="2">
 
   <thead>
     <tr>      
@@ -203,28 +198,27 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+{% if Quinto|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Quinto|get_at_index:x != Quinto|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Quinto|get_nombre_at:x }} </td>
-        <td> {{ Quinto|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Quinto|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
-</table>
+    </table>
       <h6 class = "normal"> Sexto Semestre </h6>
 
-<table  class = "normal" border="2">
+<table class = "normal" border="2">
 
   <thead>
     <tr>      
@@ -240,25 +234,24 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+{% if Sexto|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Sexto|get_at_index:x != Sexto|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Sexto|get_nombre_at:x }} </td>
-        <td> {{ Sexto|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Sexto|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
-</table>
+    </table>
       <h6 class = "normal"> Septimo Semestre </h6>
 
 <table class = "normal" border="2">
@@ -277,25 +270,24 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+
+{% if Septimo|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Septimo|get_at_index:x != Septimo|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Septimo|get_nombre_at:x }} </td>
-        <td> {{ Septimo|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Septimo|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
-</table>
+    </table>
       <h6 class = "normal"> Octavo Semestre </h6>
 
 <table class = "normal" border="2">
@@ -314,26 +306,28 @@
 {% with forloop.counter|add:-1 as i %} 
 {% with forloop.counter as x %}
 {% load apptags %}
-  {% if forloop.first %}
-      <tr>
-        <td> {{ H.Nombre}} </td>
-        <td> {{ H.Calificacion_Final }} </td>
+{% if Octavo|get_calificacion_at:i == null %}
+         <tr>
+        <td> {{H.N}} </td>
+        <td> </td>
       </tr>
-  {% else %}
-      {% if Octavo|get_at_index:x != Octavo|get_at_index:i %}
+      {% else %}
       <tr>
-        <td> {{ Octavo|get_nombre_at:x }} </td>
-        <td> {{ Octavo|get_calificacion_at:x }} </td>
+        <td> {{H.N}} </td>
+        <td> {{ Octavo|get_calificacion_at:i }} </td>
       </tr>
-      {% endif %}
-  {% endif %}
+      {% endif%}
  {% endwith%}
  {% endwith%}
 {% endfor %}
   
     </tbody>
- </table>
-    </ul>
+    </table>
+
+ <br>
+ <br>
+ <br>
+    <!--</ul>-->
  </div>
 </div>
 {% endblock contenido %}

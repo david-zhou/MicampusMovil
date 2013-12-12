@@ -5,7 +5,7 @@
 
           <h6 style ="font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;o
                     font-weight: normal;
-                    font-size: 100%;
+                    font-size: 190%;
                     text-align: left;
                     ">
           Boleta </h6>
@@ -17,7 +17,7 @@
            </ul>
       </nav>
 
-   <table  style = "width:15%; font-size:1em" ALIGN=LEFT>
+   <table  style = "width:15%; font-size: 180%" ALIGN=LEFT>
   <thead>
     <tr>
       <th ALIGN=CENTER>Matrícula:</th> 
@@ -40,8 +40,8 @@
 </tbody>
 </table>    
 
-<br><br><br>
-<table  style = "width:100%; font-size:1em" border="2">
+<br><br><br><br>
+<table  style = "width:100%, height:100%; font-size:180%" border="2" ALIGN=CENTER>
   <thead>
     <tr>
       <th>Materia</th> 
@@ -55,7 +55,7 @@
 <tbody>
     {% for Alumno in NombreAlumno %}
     <tr>
-      <td ALIGN=CENTER>{{ Alumno.Nombre }}</td>
+      <td ALIGN=CENTER nowrap>{{ Alumno.Nombre }}</td>
       <td ALIGN=CENTER> {{ Alumno.Faltas }} </td>
       <td ALIGN=CENTER> {{ Alumno.Cal1 }} </td>
       <td ALIGN=CENTER> {{ Alumno.Cal2 }} </td>

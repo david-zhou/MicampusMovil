@@ -12,29 +12,30 @@
 <div class="containter" style="height:100%;width:100%;" >
 
 <style>
-  h6.normal {line-height:150%; font-size: 180%}
-  table.normal{width: 100%; font-size: 180%}
-  p.big {line-height:150%; font-size: 180%; height: 100%}
-  li.big {line-height:150%; font-size: 180%;}
+  h6.normal {line-height:80%; font-size: 80%}
+  table.normal{width: 110%; font-size: 80%}
+  p.big {line-height:80%; font-size: 80%; height: 100%}
+  li.big {line-height:80%; font-size: 80%;}
 </style>
         <h6 class = "normal">
-          Historial Academico</h6>
+          Historial Académico</h6>
                     
        <div class="button-set">
-    <a href="/Principal/{{Matricula}}"><button> <img  style = "width:50px; height:40" src = "{{STATIC_URL}}images/Back.png"></button></a>
+    <a href="/Principal/{{Matricula}}"><button> <img  style = "width:25px; height:20" src = "{{STATIC_URL}}images/Back.png"></button></a>
     </div>
 
 
 <h6></h6>
 <h6 align = "left" class = "normal" >Matricula : {{A.0.Matricula}}</h6>
 <h6 align = "left" class = "normal">Nombre : {{A.0.Nombre}}</h6>
-<h6 align = "left" class = "normal">Concentracion : {{A.0.Concentracion}}</h6>
+<h6 align = "left" class = "normal">Concentración : {{A.0.Concentracion}}</h6>
 
  
  <h6 class = "normal"> Primer Semestre </h6>
 
       <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -58,7 +59,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Historial|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Historial|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
 
@@ -73,7 +74,8 @@
  <h6 class = "normal"> Segundo Semestre </h6>
 
  <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -97,7 +99,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Segundo|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Segundo|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -111,7 +113,8 @@
 
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -135,7 +138,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Tercero|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Tercero|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -147,7 +150,8 @@
       <h6 class ="normal"> Cuarto Semestre </h6>
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -171,7 +175,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Cuarto|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Cuarto|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -183,7 +187,8 @@
       <h6 class = "normal"> Quinto Semestre </h6>
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -207,7 +212,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Quinto|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Quinto|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -219,7 +224,8 @@
       <h6 class = "normal"> Sexto Semestre </h6>
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -243,7 +249,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Sexto|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Sexto|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -255,7 +261,8 @@
       <h6 class = "normal"> Septimo Semestre </h6>
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -279,7 +286,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Septimo|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Septimo|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
@@ -291,7 +298,8 @@
       <h6 class = "normal"> Octavo Semestre </h6>
 
 <table class = "normal" border="2">
-
+      <col width="70%">
+      <col width="20%">
   <thead>
     <tr>      
 
@@ -314,7 +322,7 @@
       {% else %}
       <tr>
         <td> {{H.N}} </td>
-        <td> {{ Octavo|get_calificacion_at:i }} </td>
+        <td align="center"> {{ Octavo|get_calificacion_at:i }} </td>
       </tr>
       {% endif%}
  {% endwith%}
